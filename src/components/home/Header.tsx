@@ -50,7 +50,7 @@ export default function Header() {
           </ul>
         </div>
         <div className="w-full lg:w-1/2">
-          <Image src={images[imgN]} alt={`Image ${imgN}`} width={474} height={474} className={"mx-auto "}/>
+          <Image src={images[imgN]} alt={`Image ${imgN}`} width={454} height={454} className={"mx-auto "}/>
         </div>
       </div>
     </header>

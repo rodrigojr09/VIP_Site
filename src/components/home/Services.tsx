@@ -7,15 +7,15 @@ export default function Services(){
             <div className="mt-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <h2 className="font-bold text-2xl mb-4">Exames Médicos Ocupacionais</h2>
-                    <p>Realizamos uma variedade de exames médicos ocupacionais conforme exigido por regulamentações trabalhistas.</p>
+                    <p>Nossa empresa realiza uma gama completa de exames médicos ocupacionais, atendendo a todas as exigências e regulamentações trabalhistas. Garantimos a saúde e a segurança dos colaboradores por meio desses procedimentos essenciais.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <h2 className="font-bold text-2xl mb-4">Desenvolvimento de Laudos</h2>
-                    <p>Desenvolvemos laudos como o LTCAT, PPRA e PCMSO para garantir a segurança e saúde no ambiente de trabalho.</p>
+                    <p>Oferecemos serviços especializados no desenvolvimento de laudos fundamentais para a segurança e saúde ocupacional. Com foco no LTCAT, PPRA e PCMSO, nosso objetivo é assegurar um ambiente de trabalho seguro e saudável para todos os colaboradores.</p>
                 </div>
                 <div className="bg-white p-6 rounded-lg shadow-md">
                     <h2 className="font-bold text-2xl mb-4">Cursos de Treinamento</h2>
-                    <p>Oferecemos cursos de treinamento voltados para a área de segurança do trabalho para capacitar os profissionais.</p>
+                    <p>Proporcionamos cursos de treinamento especializados em segurança do trabalho, visando capacitar os profissionais e promover ambientes laborais mais seguros e saudáveis.</p>
                 </div>
             </div>
         </div>
