@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className="w-full min-w-screen p-2 text-black flex">
         <div>
-            <Image src={"/Capa.png"} alt="Capa da VIP" className="w-full h-full" width={150} height={150} fetchPriority={"auto"} quality={100}/>
+            <img src={"/Capa.png"} alt="Capa da VIP" className="w-full h-full"/>
         </div>
         <div className="flex space-x-10 flex-auto justify-center items-center">
             <a>Inicio</a>
