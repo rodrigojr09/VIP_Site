@@ -10,7 +10,7 @@ export default function Home() {
         <div className="bg-[#000000c6] w-full text-white h-[60vh] justify-center text-center flex flex-col space-y-3">
           <h1 className="text-2xl font-bold">Departamento Técnico</h1>
           <p>{'msg'}</p>
-          <button className="text-green-500 text-center flex justify-center w-full space-x-2 items-center"><FaWhatsapp/> <p>{'numero'}</p></button>
+          <a href="https://wa.me/{'numero'}" className="text-green-500 text-center flex justify-center w-full space-x-2 items-center"><FaWhatsapp/> <p>{'numero'}</p></a>
         </div>
       </div>
     </>
