@@ -5,7 +5,7 @@ export default function Navbar() {
   return (
     <div className="w-full min-w-screen p-2 text-black flex">
         <div>
-            <Image src={"/Capa.png"} width={100} height={100} alt="Capa.png" fetchPriority="low" className="w-full h-full"/>
+            <Image src={"/Logo.webp"} width={100} height={100} alt="Logo" fetchPriority="low" priority={true} className="w-full h-full"/>
         </div>
         <div className="flex space-x-10 flex-auto justify-center items-center">
             <a>Inicio</a>
@@ -14,7 +14,7 @@ export default function Navbar() {
             <a>Inicio</a>
         </div>
         <div className="flex items-center relative">
-            <input className="border-b outline-none px-2 mr-7 border-green-500 placeholder:text-green-500" placeholder="Pesquisar"/>
+            <input className="border-b outline-none px-2 mr-7 border-green-500 w-full placeholder:text-green-500" placeholder="Pesquisar"/>
             <span className="absolute right-10 text-green-500">
                 <FaSearch/>
             </span>
