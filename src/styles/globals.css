@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.bg-header {
+    background-image: url("/Capa.webp");
+    background-size: auto;
+    @apply h-[80vh] w-[100vw] bg-cover;
+}
