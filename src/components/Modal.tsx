@@ -36,7 +36,7 @@ export default function Modal({
 			.filter((a) => a.type.toString().startsWith("class ModalBody"))
 			.map((child, i) => {
 				return cloneElement(child, {
-					closeModal
+					closeModal,
 				});
 			})[0];
 	}
@@ -81,8 +81,11 @@ class ModalBody extends Component<ModalBodyProps> {
 	render() {
 		const { title, children, closeModal } = this.props;
 		return (
-			<div className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50">
-				<div className="bg-white rounded-lg w-[90%] max-w-lg p-6 relative shadow-lg">
+			<div
+				className="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50"
+				onClick={(e) => closeModal && closeModal()}
+			>
+				<div className="bg-white absolute text-black rounded-lg w-[90%] max-w-lg p-6 shadow-lg">
 					{/* Modal Content */}
 					<h2 className="text-2xl font-bold mb-4">{title}</h2>
 
