@@ -7,7 +7,7 @@ const rotas = [
 	},
 	{
 		title: "Serviços",
-		href: "/servicos",
+		href: "/#services",
 	},
 	{
 		title: "Laudos",

@@ -2,7 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-
 .bg-header {
     background-image: url("/Capa.webp");
     background-size: auto;

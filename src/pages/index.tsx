@@ -1,13 +1,14 @@
-import Card from "@/components/Card";
+import ServiceCard from "@/components/Home/Services/ServiceCard";
+import Services from "@/components/Home/Services/Services";
 import Modal, { ModalBody, ModalButton } from "@/components/Modal";
 import Navbar from "@/components/Navbar";
 import { RiWhatsappFill } from "react-icons/ri";
 
 export default function Home() {
 	return (
-		<>
+		<div className="max-w-full">
 			<Navbar />
-			<header className="bg-header text-white flex justify-center items-center h-80vh">
+			<header className="bg-header text-white flex justify-center items-center max-w-full h-80vh">
 				<div className="flex-1"></div>
 				<section className="min-h-[50vh] w-[40vw] bg-black bg-opacity-70 rounded-lg p-8 mx-4 flex flex-col justify-center text-center">
 					<h1 className="font-bold text-2xl mb-4">
@@ -39,25 +40,18 @@ export default function Home() {
 					</Modal>
 				</section>
 			</header>
-			<section>
-				<h1></h1>
-				<div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
-					{servicoes.map((service, index) => (
-						<Card service={service} key={index} />
-					))}
+			<Services servicos={servicoes} />
+			<section className=" bg-gray-300 mt-8 pt-8">
+				<h1 className="text-3xl text-green-400 mt-8 text-center">
+					Contatos
+				</h1>
+				<div className="mt-8">
+					<div></div>
 				</div>
 			</section>
-			<section>
-				<h1>Contatos</h1>
-			</section>
-		</>
+		</div>
 	);
 }
-
-const contato = [
-	{ nome: "Atendimento", contato: "(19) 99131-1130" },
-	{ nome: "Comercial", contato: "(19) 99317-1847" },
-];
 
 const servicoes = [
 	{
@@ -107,6 +101,11 @@ const servicoes = [
 		description:
 			"Palestras sobre IST, alcoolismo, tabagismo e drogas têm o objetivo de conscientizar os trabalhadores sobre os riscos à saúde e os impactos no ambiente de trabalho, promovendo hábitos saudáveis e prevenção de doenças e comportamentos de risco.",
 	},
+];
+
+const contato = [
+	{ nome: "Atendimento", contato: "(19) 99131-1130" },
+	{ nome: "Comercial", contato: "(19) 99317-1847" },
 ];
 
 const departamentos = [
