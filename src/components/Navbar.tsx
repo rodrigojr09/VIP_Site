@@ -1,4 +1,5 @@
-import { FaSearch } from "react-icons/fa";
+import { FaBars } from "react-icons/fa";
+import { useState } from "react";
 
 const rotas = [
 	{
@@ -20,20 +21,16 @@ const rotas = [
 ];
 
 export default function Navbar() {
+	const [isOpen, setOpen] = useState<boolean>(false);
 	return (
 		<div className="w-full min-w-screen p-4 bg-white shadow-md flex items-center justify-between">
 			{/* Logo */}
 			<div className="flex items-center">
-				<img
-					src={"/Logo.webp"}
-                    width={128}
-                    height={62}
-					alt="Logo"
-				/>
+				<img src={"/Logo.webp"} width={128} height={62} alt="Logo" />
 			</div>
 
 			{/* Links de navegação */}
-			<div className="flex space-x-10 text-black font-semibold">
+			<div className="hidden md:flex space-x-10 text-black font-semibold">
 				{rotas.map((rota, index) => (
 					<a
 						key={index}
@@ -44,22 +41,15 @@ export default function Navbar() {
 					</a>
 				))}
 			</div>
-
-			{/* Campo de pesquisa */}
-			<div className="flex items-center relative">
-				<input
-					type="text"
-					className="border-b-2 border-green-500 outline-none px-2 pr-8 placeholder:text-green-500 w-64"
-					placeholder="Pesquisar"
-				/>
-				<span className="absolute right-3 text-green-500">
-					<FaSearch />
-				</span>
-				{/* Dropdown de resultados (vazio por enquanto) */}
-				<div className="w-full bg-white absolute top-12 shadow-lg rounded-lg z-50">
-					{/* Resultados da pesquisa aparecerão aqui */}
-				</div>
-			</div>
+			<button
+				className={`text-2xl flex md:hidden ${
+					isOpen ? "rotate-120" : "-rotate-120"
+				}`}
+				onClick={() => setOpen(!isOpen)}
+			>
+				<FaBars />
+				{`${isOpen}`}
+			</button>
 		</div>
 	);
 }

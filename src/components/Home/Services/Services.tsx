@@ -15,7 +15,7 @@ export default function Services({
 			if (window.innerWidth < 640) {
 				setItemsPerPage(1); // 1 item para telas pequenas
 			} else if (window.innerWidth < 1024) {
-				setItemsPerPage(2); // 2 itens para telas médias
+				setItemsPerPage(1); // 2 itens para telas médias
 			} else {
 				setItemsPerPage(3); // 3 itens para telas grandes
 			}

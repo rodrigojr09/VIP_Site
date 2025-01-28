@@ -5,5 +5,5 @@
 .bg-header {
     background-image: url("/Capa.webp");
     background-size: auto;
-    @apply h-[80vh] w-[100vw] bg-cover;
+    @apply min-h-[80vh] min-w-[100vw] bg-cover;
 }
