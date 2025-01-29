@@ -1,4 +1,5 @@
 import { FaBars } from "react-icons/fa";
+import Image from "next/image";
 import { useState } from "react";
 
 const rotas = [
@@ -26,7 +27,7 @@ export default function Navbar() {
 		<div className="w-full min-w-screen p-4 bg-white shadow-md flex items-center justify-between">
 			{/* Logo */}
 			<div className="flex items-center">
-				<img src={"/Logo.webp"} width={128} height={62} alt="Logo" />
+				<Image src={"/Logo.webp"} width={120} height={60} className="w-44" alt="Logo" />
 			</div>
 
 			{/* Links de navegação */}

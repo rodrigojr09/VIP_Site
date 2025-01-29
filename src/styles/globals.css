@@ -3,7 +3,12 @@
 @tailwind utilities;
 
 .bg-header {
-    background-image: url("/Capa.webp");
-    background-size: auto;
-    @apply min-h-[80vh] min-w-[100vw] bg-cover;
+	background-image: url("/Capa.webp");
+	background-size: auto;
+	@apply bg-cover;
 }
+
+::focus {
+    @apply outline-none;
+}
+
