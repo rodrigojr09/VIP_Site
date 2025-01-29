@@ -44,7 +44,7 @@ export default function Services({
 
 	return (
 		<section
-			id="services"
+			id="servicos"
 			className="pt-8 border-t-2 w-full flex flex-col items-center"
 		>
 			<h1 className="text-3xl text-green-400 text-center font-bold">

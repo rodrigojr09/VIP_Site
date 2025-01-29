@@ -16,7 +16,7 @@ export default function Home() {
 					<h1 className="font-bold text-2xl mb-4">
 						Vip Engenharia de Segurança e Medicina do Trabalho
 					</h1>
-					<p className="text-lg leading-relaxed mb-6 ">
+					<p className="leading-relaxed mb-6 ">
 						A VIP Engenharia é uma empresa especializada nos
 						serviços de Medicina Ocupacional, Engenharia de
 						Segurança e Higiene do Trabalho, atuando desde o ano de
@@ -34,7 +34,7 @@ export default function Home() {
 				</section>
 			</header>
 			<Services servicos={servicoes} />
-			<section className=" bg-gray-300 mt-8 py-8 ">
+			<section className=" bg-gray-300 mt-8 py-8 " id="contato">
 				<h1 className="text-3xl text-green-400 my-8 text-center">
 					Contato
 				</h1>
@@ -42,15 +42,19 @@ export default function Home() {
 				<div className="flex space-x-5 w-1/2 mx-auto">
 					<div className="w-1/2 text-center space-y-4">
 						{contatos.map(
-							(a: { nome: string; contato: string }, i) => (
+							(a: { nome: string; contato: string[] }, i) => (
 								<div key={i}>
-									<h1 className="text-xl text-green-400 font-bold">{a.nome}</h1>
-									<p>{a.contato}</p>
+									<h1 className="text-xl text-green-400 font-bold">
+										{a.nome}
+									</h1>
+									{a.contato.map((b: string, i2: string) => (
+										<p key={i2}>{b}</p>
+									))}
 								</div>
 							)
 						)}
 					</div>
-					<ContatoForm/>
+					<ContatoForm />
 				</div>
 			</section>
 			<footer className="bg-gray-800 text-white text-center p-4">
@@ -117,6 +121,12 @@ const servicoes = [
 ];
 
 const contatos = [
-	{ nome: "Atendimento", contato: "(19) 99131-1130" },
-	{ nome: "Comercial", contato: "(19) 99317-1847" },
+	{
+		nome: "Atendimento",
+		contato: ["(19) 99131-1130", "atendimento@vipprev.com.br"],
+	},
+	{
+		nome: "Comercial",
+		contato: ["(19) 99317-1847", "comercial@vipprev.com.br"],
+	},
 ];

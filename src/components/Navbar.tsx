@@ -9,7 +9,7 @@ const rotas = [
 	},
 	{
 		title: "Serviços",
-		href: "/#services",
+		href: "/#servicos",
 	},
 	{
 		title: "Laudos",
@@ -17,21 +17,27 @@ const rotas = [
 	},
 	{
 		title: "Contato",
-		href: "/contato",
+		href: "/#contato",
 	},
 ];
 
 export default function Navbar() {
 	const [isOpen, setOpen] = useState<boolean>(false);
 	return (
-		<div className="w-full min-w-screen p-4 bg-white shadow-md flex items-center justify-between">
+		<div className="w-full min-w-screen p-2 bg-white shadow-md flex items-center justify-between">
 			{/* Logo */}
 			<div className="flex items-center">
-				<Image src={"/Logo.webp"} width={120} height={60} className="w-44" alt="Logo" />
+				<Image
+					src="/logo.jpg"
+					sizes="100vw"
+					width={62}
+					height={62}
+					alt="Logo"
+				/>
 			</div>
 
 			{/* Links de navegação */}
-			<div className="hidden md:flex space-x-10 text-black font-semibold">
+			<div className="hidden md:flex space-x-10 w-full justify-center text-black font-semibold">
 				{rotas.map((rota, index) => (
 					<a
 						key={index}
