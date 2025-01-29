@@ -1,6 +1,7 @@
-export default function ContatoInput({                   
+export default function ContatoInput({
 	type,
 	placeholder,
+	area,
 	value,
 	onChange,
 }: {
@@ -8,12 +9,25 @@ export default function ContatoInput({
 	placeholder: string;
 	value: string;
 	onChange: (value: string) => void;
+	area?: boolean;
 }) {
-	return (
-		<input
-			type={type}
-			placeholder={placeholder}
-			className="bg-white border border-gray-800 rounded-full p-2"
-		/>
-	);
+	if (!area)
+		return (
+			<input
+				onChange={(e) => onChange(e.target.value)}
+				value={value}
+				type={type}
+				placeholder={placeholder}
+				className="bg-white rounded-xl p-2 focus:outline-green-100 focus:outline-2"
+			/>
+		);
+	else
+		return (
+			<textarea
+				onChange={(e) => onChange(e.target.value)}
+				value={value}
+				placeholder={placeholder}
+				className="bg-white rounded-xl p-2 resize-none focus:outline-green-100 focus:outline-2"
+			></textarea>
+		);
 }

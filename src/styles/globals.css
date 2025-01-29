@@ -8,7 +8,6 @@
 	@apply bg-cover;
 }
 
-::focus {
-    @apply outline-none;
+* {
+	@apply outline-none;
 }
-
