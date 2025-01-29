@@ -26,12 +26,11 @@ export default function Navbar() {
 	return (
 		<div className="w-full min-w-screen p-2 bg-white shadow-md flex items-center justify-between">
 			{/* Logo */}
-			<div className="flex items-center">
+			<div className="mx-8 flex items-center">
 				<Image
 					src="/logo.jpg"
-					sizes="100vw"
-					width={62}
-					height={62}
+					width={70}
+					height={70}
 					alt="Logo"
 				/>
 			</div>
