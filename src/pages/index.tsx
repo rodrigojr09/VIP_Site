@@ -4,6 +4,7 @@ import Services from "@/components/Home/Services/Services";
 import Modal, { ModalBody, ModalButton } from "@/components/Modal";
 import Navbar from "@/components/Navbar";
 import { CgEnter } from "react-icons/cg";
+import Image from "next/image";
 import { RiWhatsappFill } from "react-icons/ri";
 
 export default function Home() {
@@ -34,6 +35,11 @@ export default function Home() {
 				</section>
 			</header>
 			<Services servicos={servicoes} />
+			<h1 className="text-3xl text-green-600 my-8 text-center">LAUDOS</h1>
+			<section>
+              <Image src="/laudos/PGR.jpg" width={1600} height={100}  className="min-w-full" alt="Descrição da imagem"/>
+			  
+			</section>
 			<section className=" bg-gray-300 mt-8 py-8 " id="contato">
 				<h1 className="text-3xl text-green-400 my-8 text-center">
 					Contato
@@ -128,5 +134,17 @@ const contatos = [
 	{
 		nome: "Comercial",
 		contato: ["(19) 99317-1847", "comercial@vipprev.com.br"],
+	},
+];
+
+const laudos = [
+	{
+		title: "Programa de gerenciamento de riscos",
+		description:
+			"Laudos e programas de saúde e segurança no trabalho avaliam riscos, promovem a saúde dos trabalhadores e asseguram o cumprimento das normas legais, prevenindo acidentes e doenças ocupacionais.",
+	},
+	{
+		title: "Análises quantitativas e qualitativas de riscos ocupacionais",
+		description:"dddd"
 	},
 ];
