@@ -47,7 +47,7 @@ export default function Home() {
 									<h1 className="text-xl text-green-400 font-bold">
 										{a.nome}
 									</h1>
-									{a.contato.map((b: string, i2: string) => (
+									{a.contato.map((b: string, i2) => (
 										<p key={i2}>{b}</p>
 									))}
 								</div>
