@@ -13,7 +13,7 @@ const rotas = [
 	},
 	{
 		title: "Laudos",
-		href: "/laudos",
+		href: "/#laudos",
 	},
 	{
 		title: "Contato",
