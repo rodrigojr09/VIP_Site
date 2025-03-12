@@ -34,12 +34,12 @@ export default function Home() {
       <Navbar />
       <header className="bg-header text-white flex justify-center items-center px-4 h-[80vh] w-full">
         <div className="flex-1"></div>
-        <section className="min-h-max w-full md:max-w-[40vw] bg-black bg-opacity-70 rounded-lg p-8 flex flex-col justify-center text-center">
+        <section className="min-h-max w-full md:max-w-[40vw] bg-green-500 bg-opacity-70 rounded-lg p-8 flex flex-col justify-center text-center">
           <h1 className="font-bold text-2xl mb-4">
-            Vip Engenharia de Segurança e Medicina do Trabalho
+            Vip Preventiva Enganharia e Medicina do trabalho 
           </h1>
           <p className="leading-relaxed mb-6">
-            A VIP Engenharia é uma empresa especializada nos serviços de
+            A VIP Preventiva é uma empresa especializada nos serviços de
             Medicina Ocupacional, Engenharia de Segurança e Higiene do Trabalho,
             atuando desde o ano de 2001 na cidade de Mococa-SP e região.
           </p>
@@ -48,10 +48,62 @@ export default function Home() {
 
       <Services servicos={servicoes} />
 
+      <section className="bg-gray-300 mt-8 py-10">
+        <h1 className="text-3xl text-green-400 text-center mt-2">Laudos</h1>
+        <div className="grid grid-cols-2 md:grid-cols-4 lg:grid-cols-4 gap-4 w-full mx-auto mt-6 px-2">
+          {/* Imagem 1 */}
+          <div className="flex justify-center">
+            <Image
+              alt="PGR"
+              src=""
+              width={500}
+              height={100}
+              quality={100}
+              className="w-3/4 h-auto"
+            />
+          </div>
+
+          {/* Imagem 2 */}
+          <div className="flex justify-center">
+            <Image
+              alt="PCMSO"
+              src=""
+              width={500}
+              height={100}
+              quality={100}
+              className="w-3/4 h-auto"
+            />
+          </div>
+
+          {/* Imagem 3 */}
+          <div className="flex justify-center">
+            <Image
+              alt="LTCAT"
+              src=""
+              width={500}
+              height={100}
+              quality={100}
+              className="w-3/4 h-auto"
+            />
+          </div>
+
+          {/* Imagem 4 */}
+          <div className="flex justify-center">
+            <Image
+              alt="LIP"
+              src=""
+              width={500}
+              height={100}
+              quality={100}
+              className="w-3/4 h-auto"
+            />
+          </div>
+        </div>
+      </section>
+
       <section className="bg-gray-300 mt-8 py-10" id="contato">
         <h1 className="text-3xl text-green-400 text-center">Contato</h1>
         <div className="flex flex-col md:flex-row w-full mx-auto mt-8 px-4">
-			
           {/* Imagem ocupando 25% */}
           <div className="w-full md:w-1/2 flex justify-center">
             <Image
