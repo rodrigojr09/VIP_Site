@@ -1,11 +1,8 @@
 import React, { useState, useEffect } from "react";
 import ServiceCard from "./ServiceCard";
+import servicos from "@/data/servicos";
 
-export default function Services({
-	servicos,
-}: {
-	servicos: { title: string; description: string; category?: string }[];
-}) {
+export default function Services() {
 	const [currentIndex, setCurrentIndex] = useState(0);
 	const [itemsPerPage, setItemsPerPage] = useState(3);
 

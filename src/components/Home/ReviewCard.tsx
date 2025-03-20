@@ -1,5 +1,5 @@
 import Image from "next/image";
-import { Star, MoreVertical } from "lucide-react";
+import { Star, MoreVertical, Link2 } from "lucide-react";
 
 interface ReviewProps {
 	name: string;
@@ -17,7 +17,7 @@ export default function ReviewCard({
 	comment,
 }: ReviewProps) {
 	return (
-		<div className="w-full max-w-md p-4 bg-white shadow-md rounded-lg border border-gray-200 flex flex-col">
+		<div className="w-full max-w-md h-auto p-4 bg-white shadow-md rounded-lg border border-gray-200 flex flex-col">
 			<div className="flex justify-between items-center">
 				{/* Perfil */}
 				<div className="flex items-center gap-3">
@@ -34,13 +34,14 @@ export default function ReviewCard({
 					</div>
 				</div>
 				{/* Menu de opções */}
-				<MoreVertical className="text-gray-500 cursor-pointer" />
+				<Link2 className="text-gray-500 cursor-pointer" />
 			</div>
 			{/* Avaliação */}
 			<div className="flex items-center mt-2 gap-1">
 				{[...Array(5)].map((_, index) => (
 					<Star
 						key={index}
+						
 						size={16}
 						className={
 							index < rating ? "text-yellow-500" : "text-gray-300"
