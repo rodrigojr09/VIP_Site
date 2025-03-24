@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import { useState, useRef, useEffect } from "react";
 import { ChevronDown, Menu, X } from "lucide-react";
+import { useRouter } from "next/router";
 
 type Route = {
 	title: string;
@@ -17,12 +18,21 @@ const routes: Route[] = [
 	},
 	{ title: "Sobre", href: "/#about" },
 	{ title: "Contato", href: "/#contato" },
-	{ title: "Politica de Privacidade", href: "/privacy" },
+	{
+		title: "Políticas",
+		subitems: [
+			{ title: "Política Privacidade", href: "/politicas/privacidade" },
+			{ title: "Termos de Uso", href: "/politicas/termos" },
+		],
+	},
 ];
 
 export default function Navbar() {
 	const [menuOpen, setMenuOpen] = useState(false);
-
+	const router = useRouter();
+	useEffect(() => {
+		setMenuOpen(false);
+	}, [router.asPath]);
 	return (
 		<header className="w-full p-4 bg-white text-black shadow-md flex items-center justify-between">
 			<div className="mx-4 flex items-center">
@@ -64,8 +74,10 @@ export default function Navbar() {
 
 			{/* Menu Mobile */}
 			<div
-				className={`absolute top-16 left-0 w-full bg-gray-300 shadow-md flex flex-col items-center md:hidden p-4 z-50 overflow-hidden transition-all duration-300 ${
-					menuOpen ? "max-h-[500px] opacity-100" : "max-h-0 opacity-0"
+				className={`absolute top-16 left-0 w-full bg-gray-300 shadow-md flex flex-col items-center md:hidden p-4 z-50 transition-all duration-300 ${
+					menuOpen
+						? "max-h-screen opacity-100"
+						: "max-h-0 opacity-0 overflow-hidden"
 				}`}
 			>
 				{routes.map((rota, index) =>
@@ -80,6 +92,7 @@ export default function Navbar() {
 							key={index}
 							title={rota.title}
 							subitems={rota.subitems || []}
+							mobile
 						/>
 					)
 				)}
@@ -109,69 +122,81 @@ function NavLink({ title, href }: NavLinkProps) {
 type NavMenuProps = {
 	title: string;
 	subitems: { title: string; href: string }[];
+	mobile?: boolean;
 };
-export function NavMenu({ title, subitems }: NavMenuProps) {
+
+export function NavMenu({ title, subitems, mobile = false }: NavMenuProps) {
 	const [open, setOpen] = useState(false);
 	const timeoutRef = useRef<NodeJS.Timeout | null>(null);
 	const menuRef = useRef<HTMLDivElement | null>(null);
-
-	// Fecha o menu ao clicar fora dele
+	const router = useRouter();
 	useEffect(() => {
-		const handleClickOutside = (event: MouseEvent) => {
-			if (
-				menuRef.current &&
-				!menuRef.current.contains(event.target as Node)
-			) {
-				setOpen(false);
-			}
-		};
-		document.addEventListener("mousedown", handleClickOutside);
-		return () =>
-			document.removeEventListener("mousedown", handleClickOutside);
-	}, []);
+		setOpen(false);
+	}, [router.asPath]);
 
-	// Abre e fecha no hover (desktop)
+	// Fecha o menu ao clicar fora dele (Desktop)
+	useEffect(() => {
+		if (!mobile) {
+			const handleClickOutside = (event: MouseEvent) => {
+				if (
+					menuRef.current &&
+					!menuRef.current.contains(event.target as Node)
+				) {
+					setOpen(false);
+				}
+			};
+			document.addEventListener("mousedown", handleClickOutside);
+			return () =>
+				document.removeEventListener("mousedown", handleClickOutside);
+		}
+	}, [mobile]);
+
+	// Controle de Hover para Desktop
 	const handleMouseEnter = () => {
-		if (window.innerWidth > 768) {
+		if (!mobile && window.innerWidth > 768) {
 			if (timeoutRef.current) clearTimeout(timeoutRef.current);
 			setOpen(true);
 		}
 	};
 
 	const handleMouseLeave = () => {
-		if (window.innerWidth > 768) {
+		if (!mobile && window.innerWidth > 768) {
 			timeoutRef.current = setTimeout(() => setOpen(false), 300);
 		}
 	};
 
-	// Alternar menu ao clicar (mobile)
+	// Alternar menu ao clicar (Mobile)
 	const handleClick = () => {
 		setOpen(!open);
 	};
 
 	return (
 		<div
-			className="relative"
+			className="relative z-50 w-48 md:w-auto mx-auto"
 			onMouseEnter={handleMouseEnter}
 			onMouseLeave={handleMouseLeave}
 			ref={menuRef}
 		>
 			<button
-				className="hover:text-green-400 flex items-center transition-colors py-2"
+				className="hover:text-green-400 flex items-center w-48 md:w-auto justify-center md:justify-start transition-colors py-2"
 				onClick={handleClick}
 			>
-				{title}{" "}
+				{title}
 				<ChevronDown
 					size={16}
-					className={`duration-300 ${open ? "rotate-180" : ""}`}
+					className={`ml-2 transition-transform ${
+						open ? "rotate-180" : ""
+					}`}
 				/>
 			</button>
 
 			<div
-				className={`absolute left-0 mt-2 bg-white shadow-lg rounded-md w-48 transition-all duration-300 z-50 transform ${
-					open
-						? "opacity-100 translate-y-0"
-						: "opacity-0 -translate-y-3 pointer-events-none"
+				className={`overflow-hidden transition-all duration-300 ${
+					open ? "max-h-96 opacity-100" : "max-h-0 opacity-0"
+				} ${
+					mobile
+						? "relative bg-white shadow-lg rounded-md w-48"
+						: "absolute left-0 mt-2 bg-white shadow-lg rounded-md w-48"
 				}`}
 			>
 				{subitems.map((subitem, index) => (

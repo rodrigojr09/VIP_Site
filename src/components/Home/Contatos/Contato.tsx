@@ -3,29 +3,29 @@ import { useState } from "react";
 import contatos from "@/data/contatos";
 
 export default function Contato() {
-    const [formData, setFormData] = useState({
-            nome: "",
-            assunto: "",
-            mensagem: "",
-        });
-    
-        const handleChange = (
-            e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-        ) => {
-            setFormData({ ...formData, [e.target.name]: e.target.value });
-        };
-    
-        const gerarMailto = () => {
-            const { nome, assunto, mensagem } = formData;
-    
-            const corpo = encodeURIComponent(
-                `Nome: ${nome}\nMensagem: ${mensagem}`
-            );
-    
-            return `mailto:${"atendimento@vipsst.com.br"}?subject=${assunto}&body=${corpo}`;
-        };
+	const [formData, setFormData] = useState({
+		nome: "",
+		assunto: "",
+		mensagem: "",
+	});
+
+	const handleChange = (
+		e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
+	) => {
+		setFormData({ ...formData, [e.target.name]: e.target.value });
+	};
+
+	const gerarMailto = () => {
+		const { nome, assunto, mensagem } = formData;
+
+		const corpo = encodeURIComponent(
+			`Nome: ${nome}\nMensagem: ${mensagem}`
+		);
+
+		return `mailto:${"atendimento@vipsst.com.br"}?subject=${assunto}&body=${corpo}`;
+	};
 	return (
-		<section className="bg-gray-300 mt-8 py-10" id="contato">
+		<section className="bg-gray-300 py-10" id="contato">
 			<h1 className="text-3xl text-green-400 text-center">Contato</h1>
 			<div className="flex flex-col md:flex-row w-full mx-auto mt-8 px-4">
 				{/* Imagem ocupando 25% */}
@@ -91,4 +91,78 @@ export default function Contato() {
 			</div>
 		</section>
 	);
+}
+
+function ContatoForm() {
+	const [nome, setNome] = useState<string>("");
+	const [email, setEmail] = useState<string>("");
+	const [assunto, setAssunto] = useState<string>("");
+	const [mensagem, setMensagem] = useState<string>("");
+
+	return (
+		<div className="w-1/2 flex flex-col space-y-3 bg-green-500 p-4 rounded-xl">
+			<h1 className="text-white text-center text-xl font-bold mb-2">
+				Envie um Email
+			</h1>
+			<ContatoInput
+				type="text"
+				placeholder="nome"
+				value={nome}
+				onChange={setNome}
+			/>
+			<ContatoInput
+				type="email"
+				placeholder="Email"
+				value={email}
+				onChange={setEmail}
+			/>
+			<ContatoInput
+				type="text"
+				placeholder="Assunto"
+				value={assunto}
+				onChange={setAssunto}
+			/>
+			<ContatoInput
+				placeholder="Mensagem"
+				onChange={setMensagem}
+				value={mensagem}
+				type="text"
+				area
+			/>
+		</div>
+	);
+}
+
+function ContatoInput({
+	type,
+	placeholder,
+	area,
+	value,
+	onChange,
+}: {
+	type: "email" | "text";
+	placeholder: string;
+	value: string;
+	onChange: (value: string) => void;
+	area?: boolean;
+}) {
+	if (!area)
+		return (
+			<input
+				onChange={(e) => onChange(e.target.value)}
+				value={value}
+				type={type}
+				placeholder={placeholder}
+				className="bg-white rounded-xl p-2 focus:outline-green-100 focus:outline-2"
+			/>
+		);
+	else
+		return (
+			<textarea
+				onChange={(e) => onChange(e.target.value)}
+				value={value}
+				placeholder={placeholder}
+				className="bg-white rounded-xl p-2 resize-none focus:outline-green-100 focus:outline-2"
+			></textarea>
+		);
 }
