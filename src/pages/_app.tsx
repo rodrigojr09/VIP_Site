@@ -50,7 +50,7 @@ export default function App({ Component, pageProps }: AppProps) {
 				<meta
 					name="google-adsense-account"
 					content="ca-pub-4991145838274789"
-				></meta>
+				/>
 
 				{/* Twitter Card (para compartilhamento no Twitter) */}
 				<meta name="twitter:card" content="summary_large_image" />
