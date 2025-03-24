@@ -17,7 +17,7 @@ export default function ReviewCard({
 	comment,
 }: ReviewProps) {
 	return (
-		<div className="w-full max-w-md h-auto p-4 bg-white shadow-md rounded-lg border border-gray-200 flex flex-col">
+		<div className="w-full md:max-w-md h-auto p-4 bg-white shadow-md rounded-lg border border-gray-200 flex flex-col">
 			<div className="flex justify-between items-center">
 				{/* Perfil */}
 				<div className="flex items-center gap-3">
