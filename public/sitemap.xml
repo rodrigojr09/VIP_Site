@@ -7,15 +7,21 @@
         <priority>1.0</priority>
     </url>
     <url>
-        <loc>https://vipsst.com.br/sobre</loc>
+        <loc>https://vipsst.com.br/#about</loc>
         <lastmod>2025-03-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.8</priority>
     </url>
     <url>
-        <loc>https://vipsst.com.br/contato</loc>
+        <loc>https://vipsst.com.br/#contato</loc>
         <lastmod>2025-03-24</lastmod>
         <changefreq>monthly</changefreq>
         <priority>0.7</priority>
+    </url>
+    <url>
+        <loc>https://vipsst.com.br/#laudos</loc>
+        <lastmod>2025-03-24</lastmod>
+        <changefreq>monthly</changefreq>
+        <priority>0.6</priority>
     </url>
 </urlset>
