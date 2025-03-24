@@ -42,6 +42,13 @@ export default function Document() {
 					content="https://vipsst.com.br/imagem-destacada.jpg"
 				/>
 
+				{/* Monetização Google AdSense */}
+				<script
+					async
+					src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4991145838274789"
+					crossOrigin="anonymous"
+				></script>
+
 				{/* Twitter Card (para compartilhamento no Twitter) */}
 				<meta name="twitter:card" content="summary_large_image" />
 				<meta
