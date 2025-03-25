@@ -3,6 +3,7 @@ import Contato from "@/pages/contato";
 import Header from "@/components/Home/Header";
 import Laudos from "@/components/Home/Laudos/Laudos";
 import Maps from "@/components/Home/Maps";
+import Whatsapp from "@/components/Home/Whatsapp";
 
 export default function Home() {
 	return (
@@ -14,6 +15,7 @@ export default function Home() {
 			<p className="h-2 w-full my-2"></p>
 			<Contato />
 			<Maps />
+			<Whatsapp />
 		</div>
 	);
 }
