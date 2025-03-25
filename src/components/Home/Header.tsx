@@ -13,8 +13,8 @@ export default function Header() {
 					</h1>
 					<p className="leading-relaxed text-base md:text-lg my-4 text-gray-200">
 						A VIP é uma empresa especializada nos serviços de
-						Medicina Ocupacional, Engenharia de Segurança e Higiene
-						do Trabalho, atuando desde o ano de 2001 na cidade de
+						Medicina Ocupacional, Engenharia de Segurança e Saude do
+						Trabalho, atuando desde o ano de 2001 na cidade de
 						Mococa-SP e região.
 					</p>
 				</div>
