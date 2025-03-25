@@ -8,7 +8,7 @@ export default function Header() {
 			<section className="relative z-10 h-full w-full flex flex-col md:flex-row justify-center md:justify-between items-center px-6 md:px-12 gap-6">
 				{/* Informações da empresa */}
 				<div className="w-full md:w-1/2 text-center md:text-left">
-					<h1 className="font-bold text-2xl md:text-3xl my-4 text-green-500 leading-tight">
+					<h1 className="font-bold text-2xl md:text-3xl my-4 text-green-vip leading-tight">
 						Vip Engenharia de Segurança e Medicina do Trabalho
 					</h1>
 					<p className="leading-relaxed text-base md:text-lg my-4 text-gray-200">

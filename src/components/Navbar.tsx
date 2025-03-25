@@ -111,7 +111,7 @@ function NavLink({ title, href }: NavLinkProps) {
 	return (
 		<Link
 			href={href}
-			className="hover:text-green-400 transition-colors py-2"
+			className="hover:text-green-vip transition-colors py-2"
 			role="menuitem"
 		>
 			{title}
@@ -178,7 +178,7 @@ export function NavMenu({ title, subitems, mobile = false }: NavMenuProps) {
 			ref={menuRef}
 		>
 			<button
-				className="hover:text-green-400 flex items-center w-48 md:w-auto justify-center md:justify-start transition-colors py-2"
+				className="hover:text-green-vip flex items-center w-48 md:w-auto justify-center md:justify-start transition-colors py-2"
 				onClick={handleClick}
 			>
 				{title}
@@ -203,7 +203,7 @@ export function NavMenu({ title, subitems, mobile = false }: NavMenuProps) {
 					<Link
 						key={index}
 						href={subitem.href}
-						className="block px-4 py-2 hover:text-green-400 transition-colors"
+						className="block px-4 py-2 hover:text-green-vip transition-colors"
 						role="menuitem"
 						onClick={() => setOpen(false)} // Fecha o menu ao clicar no item
 					>

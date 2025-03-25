@@ -18,13 +18,13 @@ const laudos: LaudoType[] = [
 		id: "LTCAT",
 		image: "/laudos/LTCAT.jpg",
 		description:
-			"O LTCAT (Laudo Técnico das Condições Ambientais do Trabalho) é um documento técnico que avalia os agentes nocivos no ambiente de trabalho para determinar se os trabalhadores têm direito à aposentadoria especial.",
+			"O LTCAT (Laudo Técnico das Condições Ambientais do Trabalho) é um documento técnico que avalia os agentes nocivos no ambiente de trabalho para determinar o direito à aposentadoria especial.",
 	},
 	{
 		id: "LIP",
 		image: "/laudos/LIP.jpg",
 		description:
-			"O LIP (Laudo de Insalubridade e Periculosidade) é um documento técnico que avalia as condições de trabalho para determinar se um colaborador tem direito aos adicionais de insalubridade e/ou periculosidade, conforme as NR 15 e NR 16.",
+			"O LIP (Laudo de Insalubridade e Periculosidade) é um documento técnico que avalia as condições de trabalho para determinar os adicionais de insalubridade e/ou periculosidade, conforme as NR 15 e NR 16.",
 	},
 ];
 
@@ -75,16 +75,16 @@ export default function Laudos() {
 
 	return (
 		<section className="bg-gray-300 mt-8 py-10 px-4" id="laudos">
-			<h1 className="text-2xl sm:text-3xl text-green-400 text-center mt-2">
+			<h1 className="text-2xl sm:text-3xl text-green-vip font-bold text-center mt-2">
 				Laudos
 			</h1>
 			<p className="text-gray-700 text-center mt-2 w-full sm:w-4/5 mx-auto text-sm sm:text-base">
-				Oferecemos a elaboração de laudos técnicos essenciais para a
-				segurança e saúde do trabalho (SST), como LTCAT, LIP, PCMSO e
-				PGR. Nossos serviços garantem a conformidade com as normas
-				reguladoras, identificando riscos ocupacionais, prevenindo
-				acidentes e assegurando a qualidade do ambiente de trabalho para
-				colaboradores e empresas.
+				Oferecemos a elaboração de laudos técnicos e programas
+				essenciais para a segurança e saúde do trabalho (SST), como
+				LTCAT, LIP, PCMSO e PGR. Nossos serviços garantem a conformidade
+				com as normas reguladoras, identificando riscos ocupacionais,
+				prevenindo acidentes e assegurando a qualidade do ambiente de
+				trabalho para colaboradores e empresas.
 			</p>
 			<div className="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 w-full sm:w-4/5 mx-auto mt-6 px-2">
 				{laudos.map((laudo) => (

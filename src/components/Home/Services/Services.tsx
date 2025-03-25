@@ -44,7 +44,7 @@ export default function Services() {
 			id="servicos"
 			className="pt-8 border-t-2 w-full flex flex-col items-center"
 		>
-			<h1 className="text-3xl text-green-400 text-center font-bold">
+			<h1 className="text-3xl text-green-vip text-center font-bold">
 				Nossos Serviços
 			</h1>
 			<div className="relative w-full max-w-[80%] mt-8">
@@ -91,7 +91,7 @@ export default function Services() {
 						onClick={() => setCurrentIndex(pageIndex)}
 						className={`w-3 h-3 rounded-full cursor-pointer ${
 							pageIndex === currentIndex
-								? "bg-green-400"
+								? "bg-green-vip"
 								: "bg-gray-300"
 						}`}
 					/>

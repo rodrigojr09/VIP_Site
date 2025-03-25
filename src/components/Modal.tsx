@@ -50,7 +50,7 @@ function ModalButton({ children, label, openModal }: ModalButtonProps) {
 	return (
 		<button
 			onClick={openModal}
-			className="flex items-center justify-center bg-green-500 hover:bg-green-600 transition-all text-white font-bold py-2 px-4 mx-auto rounded-md"
+			className="flex items-center justify-center bg-green-vip hover:bg-green-500 transition-all text-white font-bold py-2 px-4 mx-auto rounded-md"
 		>
 			{label || children}
 		</button>

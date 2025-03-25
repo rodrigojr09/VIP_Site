@@ -26,7 +26,7 @@ export default function Contato() {
 	};
 	return (
 		<section className="bg-gray-300 py-10" id="contato">
-			<h1 className="text-3xl text-green-400 text-center">Contato</h1>
+			<h1 className="text-3xl text-green-vip text-center">Contato</h1>
 			<div className="flex flex-col md:flex-row w-full mx-auto mt-8 px-4">
 				{/* Imagem ocupando 25% */}
 				<div className="w-full md:w-1/2 flex justify-center">
@@ -44,7 +44,7 @@ export default function Contato() {
 				<div className=" w-full md:w-1/4  text-start my-auto space-y-6">
 					{contatos.map((a, i) => (
 						<div key={i} className="w-full items-center">
-							<h1 className="text-2xl text-green-400 font-bold">
+							<h1 className="text-2xl text-green-vip font-bold">
 								{a.nome}
 							</h1>
 							{a.contato.map((b, i2) => (
@@ -64,7 +64,7 @@ export default function Contato() {
 						placeholder="Nome"
 						required
 						onChange={handleChange}
-						className="w-3/4 p-3 border-2 border-green-500 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+						className="w-3/4 p-3 border-2 border-green-vip rounded-md focus:outline-none focus:ring-2 focus:ring-green-vip"
 					/>
 					<input
 						type="text"
@@ -72,18 +72,18 @@ export default function Contato() {
 						placeholder="Assunto"
 						required
 						onChange={handleChange}
-						className="w-3/4 p-3 border-2 border-green-500 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+						className="w-3/4 p-3 border-2 border-green-vip rounded-md focus:outline-none focus:ring-2 focus:ring-green-vip"
 					/>
 					<textarea
 						name="mensagem"
 						placeholder="Mensagem"
 						required
 						onChange={handleChange}
-						className="w-3/4 p-3 border-2 border-green-500 rounded-md focus:outline-none focus:ring-2 focus:ring-green-400"
+						className="w-3/4 p-3 border-2 border-green-vip rounded-md focus:outline-none focus:ring-2 focus:ring-green-vip"
 					></textarea>
 					<a
 						href={gerarMailto()}
-						className="bg-green-500 text-white px-6 py-3 w-3/4 rounded-md hover:bg-green-600 focus:outline-none focus:ring-2 focus:ring-green-400 text-center"
+						className="bg-green-vip text-white px-6 py-3 w-3/4 rounded-md hover:bg-green-500 focus:outline-none focus:ring-2 focus:ring-green-vip text-center"
 					>
 						Enviar Email
 					</a>
@@ -100,7 +100,7 @@ function ContatoForm() {
 	const [mensagem, setMensagem] = useState<string>("");
 
 	return (
-		<div className="w-1/2 flex flex-col space-y-3 bg-green-500 p-4 rounded-xl">
+		<div className="w-1/2 flex flex-col space-y-3 bg-green-vip p-4 rounded-xl">
 			<h1 className="text-white text-center text-xl font-bold mb-2">
 				Envie um Email
 			</h1>

@@ -8,6 +8,9 @@ export default function App({ Component, pageProps }: AppProps) {
 	return (
 		<>
 			<Head>
+				<title>
+					VIP Engenharia de Segurança e Medicina do Trabalho
+				</title>
 				{/* Meta tags essenciais */}
 				<meta charSet="UTF-8" />
 				<meta

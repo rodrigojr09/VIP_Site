@@ -31,7 +31,7 @@ export default function Contato() {
 
 	return (
 		<section className="bg-gray-300 py-10 px-4" id="contato">
-			<h1 className="text-3xl text-green-400 text-center">
+			<h1 className="text-3xl text-green-vip text-center">
 				Fale Conosco
 			</h1>
 			<div className="flex flex-col md:flex-row w-full mx-auto mt-8">
@@ -51,7 +51,7 @@ export default function Contato() {
 				<div className="w-full md:w-1/3 text-start my-auto space-y-6">
 					{contatos.map((a, i) => (
 						<div key={i} className="w-full">
-							<h1 className="text-2xl text-green-400 font-bold">
+							<h1 className="text-2xl text-green-vip font-bold">
 								{a.nome}
 							</h1>
 							{a.contato.map((b, i2) => (
@@ -71,7 +71,7 @@ export default function Contato() {
 						placeholder="Nome completo"
 						required
 						onChange={handleChange}
-						className="w-3/4 p-3 border-2 border-green-500 rounded-md focus:ring-2 focus:ring-green-400"
+						className="w-3/4 p-3 border-2 border-green-vip rounded-md focus:ring-2 focus:ring-green-vip"
 					/>
 					<input
 						type="email"
@@ -79,7 +79,7 @@ export default function Contato() {
 						placeholder="Email"
 						required
 						onChange={handleChange}
-						className="w-3/4 p-3 border-2 border-green-500 rounded-md focus:ring-2 focus:ring-green-400"
+						className="w-3/4 p-3 border-2 border-green-vip rounded-md focus:ring-2 focus:ring-green-vip"
 					/>
 					<input
 						type="text"
@@ -87,14 +87,14 @@ export default function Contato() {
 						placeholder="Assunto"
 						required
 						onChange={handleChange}
-						className="w-3/4 p-3 border-2 border-green-500 rounded-md focus:ring-2 focus:ring-green-400"
+						className="w-3/4 p-3 border-2 border-green-vip rounded-md focus:ring-2 focus:ring-green-vip"
 					/>
 					<textarea
 						name="mensagem"
 						placeholder="Mensagem"
 						required
 						onChange={handleChange}
-						className="w-3/4 p-3 border-2 border-green-500 rounded-md focus:ring-2 focus:ring-green-400"
+						className="w-3/4 p-3 border-2 border-green-vip rounded-md focus:ring-2 focus:ring-green-vip"
 					></textarea>
 
 					{/* Checkbox de consentimento */}
@@ -105,20 +105,20 @@ export default function Contato() {
 							checked={formData.aceitoTermos}
 							onChange={handleChange}
 							required
-							className="accent-green-500"
+							className="accent-green-vip"
 						/>
 						<span>
 							Declaro que li e aceito os{" "}
 							<a
 								href="/termos-de-uso"
-								className="text-green-500 underline"
+								className="text-green-vip underline"
 							>
 								Termos de Uso
 							</a>{" "}
 							e a{" "}
 							<a
 								href="/politica-de-privacidade"
-								className="text-green-500 underline"
+								className="text-green-vip underline"
 							>
 								Política de Privacidade
 							</a>
@@ -130,7 +130,7 @@ export default function Contato() {
 						href={gerarMailto()}
 						className={`px-6 py-3 w-3/4 rounded-md text-center text-white ${
 							formData.aceitoTermos
-								? "bg-green-500 hover:bg-green-600"
+								? "bg-green-vip hover:bg-green-500"
 								: "bg-gray-400 cursor-not-allowed"
 						}`}
 					>

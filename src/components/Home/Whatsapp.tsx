@@ -46,7 +46,7 @@ export default function Whatsapp() {
 			{/* Botão Flutuante do WhatsApp */}
 			<button
 				onClick={() => setOpen(!open)}
-				className="bg-green-500 hover:bg-green-600 text-white font-bold p-4 text-4xl rounded-full shadow-lg transition-all"
+				className="bg-green-vip hover:bg-green-500 text-white font-bold p-4 text-4xl rounded-full shadow-lg transition-all"
 				aria-label="Abrir WhatsApp"
 			>
 				<FaWhatsapp />
@@ -93,7 +93,7 @@ export default function Whatsapp() {
 						/>
 						<button
 							onClick={sendMessage}
-							className="bg-green-500 hover:bg-green-600 text-white h-full p-2 rounded-r-md"
+							className="bg-green-vip hover:bg-green-500 text-white h-full p-2 rounded-r-md"
 							aria-label="Enviar mensagem"
 						>
 							<FaPaperPlane />
